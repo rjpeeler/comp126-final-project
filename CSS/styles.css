@@ -1,0 +1,331 @@
+/*
+                                        GLOBAL
+                                        STYLES
+*/
+
+/* BACKGROUND COLOR/DARKEST BLUE: #0D092C
+    SECONDARY COLOR/DARK BLUE: #1F1A3E
+    ACCENT COLOR/DARK ORANGE: #E8862F
+    ACCENT COLOR/LIGHTER ORANGE: #F9AA64
+    TEXT COLOR/CREAM: #F5F3D9
+*/
+
+
+body {
+    margin: 0;
+    background-color: #0D092C;
+    color: #F5F3D9;
+    font-family: "Georgia", serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-family: "Cormorant Garamond", serif;
+    color:#E8862F;
+    font-style: italic;
+    font-size: 28px;
+}
+
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    color:#E8862F;
+    font-style: italic;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: "Cormorant Garamond", serif;
+    color:#F9AA64;
+    font-style: italic;
+    font-size: 20px;
+}
+
+h4 {
+    font-family: "Cormorant Garamond", serif;
+    color:#F9AA64;
+    font-style: italic;
+    font-size: 18px;
+}
+
+
+
+/*
+                                        HOME
+                                        PAGE
+*/
+
+
+
+body {
+    margin: 0;
+    background-color: #0D092C;
+    color: #F5F3D9;
+    font-family: "Georgia", serif;
+    font-size: 16px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "header"
+        "about"
+        "left-photo"
+        "right-photo"
+        "quote"
+        "footer";
+}
+
+
+/* HEADER
+SECTION */
+
+
+.home-header {
+    grid-area: header;
+    text-align: center;
+    padding: 150px 20px 40px;
+}
+
+.home-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    color: #F9AA64;
+    letter-spacing: 3px;
+    margin-bottom: 0px;
+    font-style: normal;
+}
+
+.home-worship {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 70px;
+    color: #E8862F;
+    margin-top: 0px;
+    margin-bottom: 60px;
+}
+
+.home-caption {
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #E8862F;
+    padding: 14px 32px;
+    border-radius: 40px;
+    color: #F5F3D9;
+    font-family: "GEORGIA", sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.home-button:hover, .home-button:focus {
+    background-color:#F5F3D9;
+    color: #E8862F;
+    text-decoration: underline;
+    transition: ease .5s;
+}
+
+
+/* ABOUT
+SECTION */
+
+
+.home-about {
+    grid-area: about;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-card {
+    background: #1F1A3E;
+    border-radius: 20px;
+    padding: 40px 45px;
+}
+
+.about-card p {
+    line-height: 1.5;
+}
+
+
+/* PHOTO
+SECTION */
+
+
+.left-photo,
+.right-photo {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.photo-card {
+    border-radius: 20px;
+    padding: 20px 45px;
+    max-width: 900px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.photo-img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 3px solid #E8862F;
+    background-size: cover;
+    background-position: center;
+}
+
+.quote-section {
+    grid-area: quote;
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 80px;
+}
+
+.quote {
+    font-size: 28px;
+    font-style: italic;
+    font-family: "Cormorant Garamond", serif;
+    color:#F5F3D9
+}
+
+footer {
+    grid-area: footer;
+    background: #1F1A3E;
+    padding: 20px;
+    color:#F9AA64;
+    border-top: solid 3px #E8862F;
+}
+
+
+@media screen and (min-width: 768px) {
+    .home-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "header header header"
+            "left-photo about right-photo"
+            "quote quote quote"
+            "footer footer footer";
+    }
+
+    .home-header {
+        grid-area: header;
+        text-align: center;
+        padding: 200px 20px 200px;
+    }
+    
+    .home-title {
+        font-size: 48px;
+    }
+    
+    .home-worship {
+        font-size: 95px;
+        color: #E8862F;
+    }
+
+    .right-photo {
+        grid-area: right-photo;
+        display: flex;
+        padding: 20px;
+    }
+    
+    .photo-card {
+        background: #1F1A3E;
+        border-radius: 20px;
+        padding: 40px 45px;
+        max-width: 900px;
+    }
+    
+    .photo-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .photo-img {
+        max-width: 360px;
+        object-fit: cover;
+        border-radius: 14px;
+        border: 3px solid #E8862F;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+
+/*
+                                        HISTORY
+                                        PAGE
+*/
+
+
+
+
+
+/*
+                                        TEAM
+                                        PAGE
+*/
+
+
+
+
+
+/*
+                                        TESTIMONIALS
+                                        PAGE
+*/
+
+
+
+
+
+/*
+                                        SONG REQUEST
+                                        PAGE
+*/
+
+
+
+
+
+/*
+                                        CONTACT
+                                        PAGE
+*/
+
+
+
+
+
+/*
+                                        CONNECT
+                                        PAGE
+*/
+
+
