@@ -47,6 +47,27 @@ h4 {
     font-size: 18px;
 }
 
+.nav-button {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #E8862F;
+    padding: 14px 32px;
+    border-radius: 40px;
+    color: #F5F3D9;
+    font-family: "GEORGIA", sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-button:hover, .nav-button:focus {
+    background-color:#F5F3D9;
+    color: #E8862F;
+    text-decoration: underline;
+    transition: ease .5s;
+}
+
 
 
 /*
@@ -55,14 +76,6 @@ h4 {
 */
 
 
-
-body {
-    margin: 0;
-    background-color: #0D092C;
-    color: #F5F3D9;
-    font-family: "Georgia", serif;
-    font-size: 16px;
-}
 
 .home-grid {
     display: grid;
@@ -111,27 +124,6 @@ SECTION */
     margin-bottom: 50px;
 }
 
-.home-button {
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: #E8862F;
-    padding: 14px 32px;
-    border-radius: 40px;
-    color: #F5F3D9;
-    font-family: "GEORGIA", sans-serif;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.home-button:hover, .home-button:focus {
-    background-color:#F5F3D9;
-    color: #E8862F;
-    text-decoration: underline;
-    transition: ease .5s;
-}
-
 
 /* ABOUT
 SECTION */
@@ -142,13 +134,14 @@ SECTION */
     display: flex;
     justify-content: center;
     text-align: center;
+    align-items: center;
     padding: 20px;
 }
 
 .about-card {
     background: #1F1A3E;
     border-radius: 20px;
-    padding: 40px 45px;
+    padding: 80px;
 }
 
 .about-card p {
@@ -165,16 +158,13 @@ SECTION */
     display: flex;
     justify-content: center;
     padding: 20px;
-    max-width: 500px;
-    margin: auto;
+    align-items: center;
 }
 
 .photo-card {
+    background: #1F1A3E;
     border-radius: 20px;
-    padding: 20px 45px;
-    max-width: 900px;
-    width: fit-content;
-    margin: 0 auto;
+    padding: 45px;
 }
 
 .photo-grid {
@@ -256,7 +246,6 @@ footer {
         background: #1F1A3E;
         border-radius: 20px;
         padding: 40px 45px;
-        max-width: 900px;
     }
     
     .photo-grid {
