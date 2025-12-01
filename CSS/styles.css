@@ -317,4 +317,51 @@ footer {
                                         PAGE
 */
 
+.navbar {
+    width: 100%;
+    background: #1F1A3E;
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    outline: 5px solid #f5f3d9;
+}
 
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    display: inline-block;
+    background-color: #E8862F;
+    padding: 14px 32px;
+    color: #F5F3D9;
+    font-family: "GEORGIA", sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 40px;
+}
+
+.navbar a:hover, .navbar a:focus {
+    background-color:#F5F3D9;
+    color: #E8862F;
+    text-decoration: underline;
+    transition: ease .5s;
+}
+
+.nav-title {
+    color: #F5f3d9;
+    font-size: 30px;
+    align-content: center;
+    padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        justify-content: space-evenly;
+    }
+}
