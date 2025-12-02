@@ -19,23 +19,25 @@
 }
 
 .page-nav {
-    background-color: #E8862F;
     font-family: "Cormorant Garamond";
-    color: #F5F3D9;
+    background-color: #1F1A3E;
+    padding: 20px;
+    color:#F9AA64;
+    border-bottom: solid 3px #E8862F;
 }
 
 .menu a {
-    color: #F5F3D9;
+    color: #f9aa64;
 }
 
 .menu a:hover, .menu a:focus {
-    color: #0D092C;
+    color:#F5F3D9;
     text-decoration: underline;
     transition: ease .5s;
 }
 
 .menu {
-    background-color: #F9AA64 !important;
+    background-color: #1F1A3E !important;
 }
 
 .brand {
@@ -323,7 +325,7 @@ VIEW */
     }
 
     .menu {
-        background-color: #E8862F !important;
+        background-color: #1F1A3E !important;
     }
 
     .home-header {
