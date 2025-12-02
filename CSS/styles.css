@@ -10,6 +10,44 @@
     TEXT COLOR/CREAM: #F5F3D9
 */
 
+/* NAV MENU STUFF */
+
+.page-header {
+    grid-area: header;
+    text-align: center;
+    padding: 75px 10px 20px;
+}
+
+.page-nav {
+    background-color: #E8862F;
+    font-family: "Cormorant Garamond";
+    color: #F5F3D9;
+}
+
+.menu a {
+    color: #F5F3D9;
+}
+
+.menu a:hover, .menu a:focus {
+    color: #0D092C;
+    text-decoration: underline;
+    transition: ease .5s;
+}
+
+.menu {
+    background-color: #F9AA64 !important;
+}
+
+.brand {
+    padding: .3em .9em;
+    border-radius: .2em;
+}
+
+.brand:focus, .brand:hover {
+    box-shadow: inset 0 0 0 99em rgba(17, 17, 17, .1);
+}
+
+/* BODY & HEADERS */
 
 body {
     margin: 0;
@@ -17,6 +55,7 @@ body {
     color: #F5F3D9;
     font-family: "Georgia", serif;
     font-size: 16px;
+    min-height: 100%;
 }
 
 h1 {
@@ -24,6 +63,7 @@ h1 {
     color:#E8862F;
     font-style: italic;
     font-size: 28px;
+    padding: 0px !important;
 }
 
 h2 {
@@ -31,6 +71,7 @@ h2 {
     color:#E8862F;
     font-style: italic;
     font-size: 24px;
+    padding: 0px !important;
 }
 
 h3 {
@@ -47,23 +88,41 @@ h4 {
     font-size: 18px;
 }
 
-.nav-button {
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: #E8862F;
-    padding: 14px 32px;
-    border-radius: 40px;
-    color: #F5F3D9;
-    font-family: "GEORGIA", sans-serif;
-    text-decoration: none;
-    font-size: 14px;
+.top-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    color: #F9AA64;
+    letter-spacing: 3px;
+    margin-bottom: 0px;
+    font-style: normal;
 }
 
-.nav-button:hover, .nav-button:focus {
-    background-color:#F5F3D9;
+.bottom-title {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 70px;
     color: #E8862F;
+    margin-top: 0px;
+    margin-bottom: 60px;
+}
+
+/* FOOTER STUFF */
+
+footer {
+    grid-area: footer;
+    background: #1F1A3E;
+    padding: 20px;
+    color:#F9AA64;
+    border-top: solid 3px #E8862F;
+}
+
+footer a {
+    color:#F9AA64;
+    text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+    color:#F5F3D9;
     text-decoration: underline;
     transition: ease .5s;
 }
@@ -123,6 +182,53 @@ SECTION */
     margin-top: 5px;
     margin-bottom: 50px;
 }
+
+
+/* NAV BUTTONS */
+
+
+.home-nav-button {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #E8862F;
+    padding: 14px 32px;
+    border-radius: 40px;
+    color: #F5F3D9;
+    font-family: "GEORGIA", sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.home-nav-button:hover, .home-nav-button:focus {
+    background-color:#F5F3D9;
+    color: #E8862F;
+    text-decoration: underline;
+    transition: ease .5s;
+}
+
+.nav-button {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #E8862F;
+    padding: 10px 26px;
+    border-radius: 40px;
+    color: #F5F3D9;
+    font-family: "GEORGIA", sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.nav-button:hover, .nav-button:focus {
+    background-color:#F5F3D9;
+    color: #E8862F;
+    text-decoration: underline;
+    transition: ease .5s;
+}
+
 
 
 /* ABOUT
@@ -201,13 +307,8 @@ SECTION */
     color:#F5F3D9
 }
 
-footer {
-    grid-area: footer;
-    background: #1F1A3E;
-    padding: 20px;
-    color:#F9AA64;
-    border-top: solid 3px #E8862F;
-}
+/* DESKTOP
+VIEW */
 
 
 @media screen and (min-width: 768px) {
@@ -219,6 +320,10 @@ footer {
             "left-photo about right-photo"
             "quote quote quote"
             "footer footer footer";
+    }
+
+    .menu {
+        background-color: #E8862F !important;
     }
 
     .home-header {
@@ -299,9 +404,77 @@ footer {
                                         PAGE
 */
 
+/* FORM
+SECTION */
 
+.songrequest-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "form"
+        "footer";
+}
 
+.form-container {
+    grid-area: form;
+    background-color:#1F1A3E;
+    border-radius: 20px;
+    padding: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 80px;
+}
 
+.form-container input {
+    background-color: #0D092C;
+    border: #F9AA64;
+}
+
+.form-container label {
+    color:#F9AA64;
+    padding-bottom: 20px;
+}
+
+.form-container button {
+    background-color: #E8862F;
+    font-style: italic;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form-container button:hover, .form-container button:focus {
+    background-color:#F5F3D9;
+    color: #E8862F;
+    text-decoration: underline;
+    transition: ease .5s;
+}
+
+/* DESKTOP
+VIEW */
+
+@media screen and (min-width: 768px) {
+
+.songrequest-grid {
+    display: grid;
+    justify-items: center;
+}
+
+.form-container {
+    grid-area: form;
+    background-color:#1F1A3E;
+    border-radius: 20px;
+    padding: 40px;
+    width: 500px;
+    margin-bottom: 80px;
+}
+
+footer {
+    justify-self: stretch;
+}
+
+}
 
 /*
                                         CONTACT
@@ -316,5 +489,3 @@ footer {
                                         CONNECT
                                         PAGE
 */
-
-
