@@ -421,13 +421,6 @@ VIEW */
         margin-right: 60px;
     }
 
-    .team-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "students";
-    }
-
     .team {
         max-width: 800px;
     }
@@ -438,10 +431,21 @@ VIEW */
                                         PAGE
 */
 
+.testimonials-grid {
+    display: grid;
+    gap: 40px;
+    width: 100%;
+    justify-items: center;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "students";
+}
+
 .students {
     grid-area: students;
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-columns: repeat(auto-fit, 1fr);
     gap: 30px;
     justify-items: center;
@@ -450,10 +454,27 @@ VIEW */
     max-width: 1200px;
 }
 
-.students {
+.student {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 14px;
+    border: 3px solid #E8862F;
+    background: #1F1A3E;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .students {
         grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
+    }
 }
+
+
 
 
 /*
@@ -598,13 +619,6 @@ footer {
     .home-caption {
         margin-left: 60px;
         margin-right: 60px;
-    }
-
-    .connect-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "ministries";
     }
 
     .ministries {
