@@ -401,19 +401,7 @@ VIEW */
         "students";
 }
 
-.students {
-    grid-area: students;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    gap: 30px;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.student {
+.team {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -440,9 +428,8 @@ VIEW */
             "students";
     }
 
-    .students {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 1200px;
+    .team {
+        max-width: 800px;
     }
 }
 
@@ -451,8 +438,22 @@ VIEW */
                                         PAGE
 */
 
+.students {
+    grid-area: students;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
 
-
+.students {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+}
 
 
 /*
