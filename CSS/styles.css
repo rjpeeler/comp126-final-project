@@ -495,79 +495,42 @@ footer {
 .connect-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "page-header"
-        "ministries";
+    gap: 40px;
+    width: 100%;
     justify-items: center;
+    padding: 20px;
+    grid-template-areas:
+    "header"
+    "ministries";
 }
 
 .page-header {
-    grid-area: page-header;
-    width: 90%;
+    grid-area: header;
 }
 
 .ministries {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "intervarsity"
-        "ruf"
-        "summit"
-        "acts"
-        "yl"
-        "cru"
-        "delight"
-        "cc";
     grid-area: ministries;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    gap: 30px;
     justify-items: center;
     align-items: center;
-    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .ministry-img {
     width: 100%;
     max-width: 360px;
-    height: auto;
-    object-fit: cover;
     border-radius: 14px;
     border: 3px solid #E8862F;
-    background-size: cover;
-    background-position: center;
-    background:#1F1A3E;
+    background: #1F1A3E;
     padding: 10px;
+    object-fit: cover;
 }
+
 .intervarsity {
     grid-area: intervarsity;
-}
-
-.ruf {
-    grid-area: ruf;
-}
-
-.summit {
-    grid-area: summit;
-}
-
-.acts {
-    grid-area: acts;
-}
-
-.yl {
-    grid-area: yl;
-}
-
-.cru {
-    grid-area: cru;
-}
-
-.delight {
-    grid-area: delight;
-}
-
-.cc {
-    grid-area: cc;
 }
 
 .ministries a {
@@ -588,4 +551,24 @@ footer {
 .home-caption a:hover, .home-caption a:focus {
     text-decoration: underline;
     color:#E8862F;
+}
+
+@media screen and (min-width: 768px) {
+
+    .home-caption {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .connect-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "ministries";
+    }
+
+    .ministries {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+    }
 }
