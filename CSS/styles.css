@@ -19,9 +19,11 @@
 }
 
 .page-nav {
-    background-color: #E8862F;
     font-family: "Cormorant Garamond";
-    color: #F5F3D9;
+    background-color: #1F1A3E;
+    padding: 20px;
+    color:#F9AA64;
+    border-bottom: solid 3px #E8862F;
 }
 
 .menu a {
@@ -29,13 +31,13 @@
 }
 
 .menu a:hover, .menu a:focus {
-    color: #0D092C;
+    color:#F9AA64;
     text-decoration: underline;
     transition: ease .5s;
 }
 
 .menu {
-    background-color: #F9AA64 !important;
+    background-color: #1F1A3E !important;
 }
 
 .brand {
@@ -117,12 +119,12 @@ footer {
 }
 
 footer a {
-    color:#F9AA64;
+    color:#F5F3D9;
     text-decoration: none;
 }
 
 footer a:hover, footer a:focus {
-    color:#F5F3D9;
+    color:#F9AA64;
     text-decoration: underline;
     transition: ease .5s;
 }
@@ -323,7 +325,7 @@ VIEW */
     }
 
     .menu {
-        background-color: #E8862F !important;
+        background-color: #1F1A3E !important;
     }
 
     .home-header {
@@ -377,9 +379,39 @@ VIEW */
                                         PAGE
 */
 
+.history-grid {
+    display: grid;
+    gap: 40px;
+    width: 100%;
+    justify-items: center;
+    padding: 20px;
+    min-height: 92.85vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "story"
+        "footer";
+}
+.story {
+    grid-area: story;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 14px;
+    border: 3px solid #E8862F;
+    background: #1F1A3E;
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+}
 
-
-
+@media screen and (min-width: 768px) {
+    .story {
+        max-width: 800px;
+    }
+}
 
 /*
                                         TEAM
@@ -387,14 +419,90 @@ VIEW */
 */
 
 
+.team-grid {
+    display: grid;
+    gap: 40px;
+    width: 100%;
+    justify-items: center;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "students";
+}
 
+.team {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 14px;
+    border: 3px solid #E8862F;
+    background: #1F1A3E;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+}
 
+@media screen and (min-width: 768px) {
+
+    .home-caption {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .team {
+        max-width: 800px;
+    }
+}
 
 /*
                                         TESTIMONIALS
                                         PAGE
 */
 
+.testimonials-grid {
+    display: grid;
+    gap: 40px;
+    width: 100%;
+    justify-items: center;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "students";
+}
+
+.students {
+    grid-area: students;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.student {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 14px;
+    border: 3px solid #E8862F;
+    background: #1F1A3E;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .students {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+    }
+}
 
 
 
@@ -409,8 +517,9 @@ SECTION */
 
 .songrequest-grid {
     display: grid;
+    min-height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header"
         "form"
@@ -465,6 +574,7 @@ VIEW */
     grid-area: form;
     background-color:#1F1A3E;
     border-radius: 20px;
+    border: 3px solid #E8862F;
     padding: 40px;
     width: 500px;
     margin-bottom: 80px;
@@ -510,3 +620,62 @@ footer {
                                         CONNECT
                                         PAGE
 */
+
+.connect-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    width: 100%;
+    justify-items: center;
+    padding: 20px;
+    grid-template-areas:
+    "header"
+    "ministries";
+}
+
+.page-header {
+    grid-area: header;
+}
+
+.ministries {
+    grid-area: ministries;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.ministry-img {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 14px;
+    border: 3px solid #E8862F;
+    background: #1F1A3E;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.home-caption a {
+    color: #F9AA64;
+}
+
+.home-caption a:hover, .home-caption a:focus {
+    text-decoration: underline;
+    color:#E8862F;
+}
+
+@media screen and (min-width: 768px) {
+
+    .home-caption {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .ministries {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+    }
+}
