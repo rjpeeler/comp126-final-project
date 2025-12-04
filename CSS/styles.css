@@ -480,7 +480,28 @@ footer {
                                         CONTACT
                                         PAGE
 */
+.form-container {
+    grid-area: form;
+    background-color:#1F1A3E;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 500px;
+    margin: 40px auto 80px;
 
+}
+
+.form-container textarea {
+    color: black;               
+    background-color: white;   
+}
+
+/* Desktop view */
+@media screen and (min-width: 768px) {
+    .contact-grid .form-container {
+        width: 500px;
+        margin-bottom: 80px;
+    }
+}
 
 
 
